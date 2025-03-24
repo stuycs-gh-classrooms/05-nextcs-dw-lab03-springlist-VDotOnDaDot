@@ -44,7 +44,7 @@ FixedOrb earth;
 OrbList slinky;
 
 void setup() {
-  size(600, 600);
+  size(1500, 900);
 
   earth = new FixedOrb(width/2, height * 200, 1, 20000);
 
