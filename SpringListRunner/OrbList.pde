@@ -227,7 +227,7 @@ class OrbList {
   /*===========================
     debug()
     
-    Prints information about the list for debugging.
+    Print information about the list for debugging.
 
     =========================*/
   void debug() {
@@ -247,23 +247,5 @@ class OrbList {
     println("Front node: ", front);
     println("Front position: (", front.center.x, ",", front.center.y, ")");
     
-    // Traverse forward and count
-    println("Forward traversal:");
-    while (current != null) {
-      count++;
-      println("Node", count, ": pos(", current.center.x, ",", current.center.y, 
-              "), prev:", (current.previous == null ? "null" : "exists"), 
-              ", next:", (current.next == null ? "null" : "exists"));
-      
-      // Verify connections are correct
-      if (current.next != null && current.next.previous != current) {
-        println("ERROR: Broken link between node", count, "and next node");
-      }
-      
-      current = current.next;
-    }
-    
-    println("Total nodes: " + count);
-    println("---------------------");
   }
 }//OrbList
